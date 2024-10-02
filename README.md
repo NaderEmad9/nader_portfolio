@@ -4,11 +4,7 @@ Thank you for visiting my portfolio website repository. This Flutter-based websi
 
 ## Live Demo
 
-You can explore the live version of the website [Click to see live demo](https://hamad-anwar.github.io/Portfolio/#/).
-
-## Screenshots
-
-<img src="showcase.png">
+You can explore the live version of the website [Click to see live demo](https://naderemad9.github.io).
 
 ## Table of Contents
 
@@ -48,11 +44,17 @@ The portfolio website is built using Flutter, a powerful open-source UI software
 To explore and interact with the portfolio website on your local machine, follow these steps:
 
 1. **Clone the Repository:**
-   git clone https://github.com/Hamad-Anwar/Flutter-Responsive-Portfolio-WebApp.git
+   ```bash
+   git clone https://github.com/NaderEmad9/naderemad9.github.io.git
+   ```
 2. **Install Dependencies:**
+   ```bash
    flutter pub get
+   ```
 3. **Run Application**
+   ```bash
    flutter run
+   ```
 
 ## Usage Guide
 
@@ -63,7 +65,6 @@ Once the website is up and running, you'll find a range of sections to explore:
 - **Certifications:** Explore my certifications, gaining insight into my professional development journey.
 - **Contact:** Reach out to me through provided contact details or social media links.
 
-
 ## Contributions
 
 I welcome contributions and suggestions from the community! If you come across any issues, have ideas for improvements, or wish to contribute in any way, feel free to open an issue or submit a pull request. Let's collaborate to make this portfolio even better!
@@ -72,8 +73,8 @@ I welcome contributions and suggestions from the community! If you come across a
 
 Your feedback and thoughts are highly valued. Feel free to connect with me through:
 
-- **Email:** rh676838@gmail.com
-- **LinkedIn:** [Hamad Anwar](https://www.linkedin.com/in/hamad-anwar)
+- **Email:** naderemad961516@gmail.com
+- **LinkedIn:** [Nader Emad](https://www.linkedin.com/in/naderr-emadd)
 
 ## License
 
@@ -81,4 +82,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-### Designed and developed with ❤️ by [Hamad Anwar](https://www.linkedin.com/in/hamad-anwar/).
+### Designed and developed with ❤️ by [Nader Emad](https://www.linkedin.com/in/nader-emad).
+```
