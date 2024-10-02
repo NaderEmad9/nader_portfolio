@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 class ImageViewer {
   ImageViewer(BuildContext context, String image) {
     showGeneralDialog(
-      barrierColor: Colors.black,
-      transitionDuration: Duration(milliseconds: 500),
+      barrierColor:
+          Colors.black.withOpacity(0.7), // Add some transparency to the barrier
+      transitionDuration: const Duration(milliseconds: 500),
       barrierDismissible: true,
       barrierLabel: 'Barrier',
       context: context,
@@ -13,30 +14,25 @@ class ImageViewer {
         return Center(
           child: Hero(
             tag: 'IMAGEVIEW',
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              child: Scaffold(
-                appBar: AppBar(
-                  backgroundColor: Colors.black,
-                  leading: IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ),
+            child: Scaffold(
+              appBar: AppBar(
                 backgroundColor: Colors.black,
-                body: Container(
-                  color: Colors.white,
-                  child: Center(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: PhotoView(imageProvider: AssetImage(image)),
-                    ),
-                  ),
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
+              backgroundColor: Colors.black,
+              body: InkWell(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: PhotoView(
+                  imageProvider: AssetImage(image),
+                  backgroundDecoration:
+                      const BoxDecoration(color: Colors.black),
                 ),
               ),
             ),
