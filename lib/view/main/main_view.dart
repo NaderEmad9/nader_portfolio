@@ -13,7 +13,7 @@ class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Determine if it's mobile or large mobile for padding
-    bool isMobile = Responsive.isMobile(context);
+    Responsive.isMobile(context);
     double topPadding =
         MediaQuery.of(context).padding.top; // Get the top padding for the notch
 
