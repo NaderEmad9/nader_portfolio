@@ -83,4 +83,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### Designed and developed with ❤️ by [Nader Emad](https://www.linkedin.com/in/nader-emad).
-```
