@@ -1,29 +1,19 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:photo_view/photo_view.dart';
 
 class ImageViewer {
-  ImageViewer(BuildContext context, String imageUrl) {
+  ImageViewer(BuildContext context, String assetImagePath) {
     if (kIsWeb) {
-      // Open image in new tab if it's a web platform, especially useful for Android Web
-      _launchImageInBrowser(imageUrl);
+      // For web, show the image in a dialog (or any other approach)
+      _showImageInDialog(context, assetImagePath);
     } else {
       // Default image viewer for mobile and desktop
-      _showImageInDialog(context, imageUrl);
+      _showImageInDialog(context, assetImagePath);
     }
   }
 
-  void _launchImageInBrowser(String imageUrl) async {
-    // This method will open the image in a new browser tab
-    if (await canLaunch(imageUrl)) {
-      await launch(imageUrl);
-    } else {
-      throw 'Could not launch $imageUrl';
-    }
-  }
-
-  void _showImageInDialog(BuildContext context, String imageUrl) {
+  void _showImageInDialog(BuildContext context, String assetImagePath) {
     showGeneralDialog(
       barrierColor: Colors.black.withOpacity(0.7),
       transitionDuration: const Duration(milliseconds: 500),
@@ -50,7 +40,7 @@ class ImageViewer {
                   Navigator.of(context).pop();
                 },
                 child: PhotoView(
-                  imageProvider: AssetImage(imageUrl),
+                  imageProvider: AssetImage(assetImagePath),
                   backgroundDecoration:
                       const BoxDecoration(color: Colors.black),
                 ),
