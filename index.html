@@ -23,6 +23,16 @@
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = "1814449652";
   </script>
+
+  <!-- Choose the renderer based on the platform -->
+  <script>
+    if (window.navigator.userAgent.indexOf("Android") !== -1) {
+      window.flutterWebRenderer = "html"; // Use HTML renderer for Android web
+    } else {
+      window.flutterWebRenderer = "canvaskit"; // Use CanvasKit for other platforms
+    }
+  </script>
+
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
